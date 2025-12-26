@@ -1,3 +1,5 @@
+# imprima na tela os padroes de números
+
 inicio = 0
 lista = []
 while inicio <5:
@@ -6,3 +8,5 @@ while inicio <5:
     for numero in lista:
         print(numero, end= " ")
     print()
+
+
