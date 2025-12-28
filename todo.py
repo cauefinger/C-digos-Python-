@@ -11,11 +11,18 @@ def mostrar_linha():
 while True:
     print("Digite a opção desejada: ")
     mostrar_linha()
-    print("Opção 1 = adicionar ") 
-    print( "Opção 2 = excluir")
-    print("Opção 3 = listar")
-    opcao = int(input("Opção desejada: "))
-    mostrar_linha()
+    print("Opção 0 = Sair")
+    print("Opção 1 = Adicionar ") 
+    print( "Opção 2 = Excluir")
+    print("Opção 3 = Listar")
+
+    try: 
+        opcao = int(input("Opção desejada: "))
+    except ValueError:
+        print("Por favor, digite apenas números.")
+        mostrar_linha()
+        continue
+
 
     if opcao == 1:
         nova_tarefa = input("Digite uma tarefa: ")
@@ -28,4 +35,11 @@ while True:
         indice_a_excluir = int(input("Digite o número da tarefa que você quer excluir: "))
         tarefas.pop(indice_a_excluir)
     elif opcao == 3:
-        mostrar_tarefas()
+        mostrar_tarefas() 
+    elif opcao == 0:
+        print("Saindo...")
+        mostrar_linha()
+        break
+    else:
+        print("Número inválido! Escolha um número de 0 a 3.")
+       
