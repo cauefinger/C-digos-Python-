@@ -6,5 +6,5 @@ while num < 10:
     print(f"o resultado de {num} x {mult} é: {num * mult}")
 
 while mult < 10: 
-    mult +=1
-(f"o resultado de {num} x {mult} é: {num * mult}")
+    mult += 1
+(f"o resultado de {num} x {mult} é: {num* mult}")
